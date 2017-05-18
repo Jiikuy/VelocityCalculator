@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Geschwindigkeitsberechner</string>
+    <string name="distance_hint">Distanz der Kamera zum Objekt (cm)</string>
+    <string name="select_video">Öffnen oder erfassen Sie ein Video.</string>
+    <string name="text_capture">Aufnehmen</string>
+    <string name="text_distance">Distanz</string>
+    <string name="text_loading">Laden...</string>
+    <string name="text_open">Öffnen</string>
+    <string name="touch_hint">Bitte berühren sie die zwei Punkte, zwischen denen sich das Objekt bewegt hat.</string>
+    <string name="text_speed">Geschwindigkeit</string>
+    <string name="text_notCompleted">Bitte berühren Sie zwei Punkte und geben Sie die Distanz ein.</string>
+</resources>
