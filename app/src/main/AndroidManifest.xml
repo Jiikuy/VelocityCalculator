@@ -16,9 +16,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".CalculateActivity" android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".CalibrationActivity"></activity>
+        <activity android:name=".CalibrationActivity" android:parentActivityName=".MainActivity"></activity>
+        <uses-feature android:name="android.hardware.camera"
+            android:required="true" />
     </application>
 
-    <uses-feature android:name="android.hardware.camera"
-        android:required="true" />
+
 </manifest>
