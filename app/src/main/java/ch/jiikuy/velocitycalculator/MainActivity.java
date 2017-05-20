@@ -35,9 +35,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Start calibration activity
         int id = item.getItemId();
-        if(id == R.menu.main_menu) {
+        if(id == R.id.action_calibrate) {
             Intent intent = new Intent(this, CalibrationActivity.class);
             startActivity(intent);
+            Log.i("iNFO", "sTARTED");
             return true;
         }
         return super.onOptionsItemSelected(item);

@@ -40,10 +40,10 @@
         android:id="@+id/button"
         android:layout_width="90dp"
         android:layout_height="49dp"
+        android:layout_marginRight="13dp"
         android:onClick="selectCoordinates"
-        android:text="@string/text_okay"
+        android:text="@android:string/ok"
         app:layout_constraintBaseline_toBaselineOf="@+id/editText"
-        android:layout_marginRight="16dp"
         app:layout_constraintRight_toRightOf="parent" />
 
     <EditText

@@ -4,10 +4,10 @@
     <string name="text_capture">Capture</string>
     <string name="text_open">Open</string>
     <string name="touch_hint">Please touch two points where the object has moved between.</string>
-    <string name="text_okay" translatable="false">OK</string>
     <string name="text_distance">Distance</string>
     <string name="text_loading">Loading...</string>
     <string name="distance_hint">Distance of camera to object (cm)</string>
     <string name="text_speed">Speed</string>
     <string name="text_notCompleted">Please select two points and enter the distance.</string>
+    <string name="text_calibration">Please enter the calibration data.</string>
 </resources>

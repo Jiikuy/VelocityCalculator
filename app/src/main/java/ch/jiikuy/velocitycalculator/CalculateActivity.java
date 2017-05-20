@@ -16,6 +16,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 
 public class CalculateActivity extends AppCompatActivity {
     int selections = 0;
@@ -120,10 +123,13 @@ public class CalculateActivity extends AppCompatActivity {
             // Get distance on combined image in Pixels
             int distanceOnVideo = (int) Math.sqrt(Math.pow(values[0] - values[2], 2) + Math.pow(values[1] - values[3], 2));
             Log.i(getString(R.string.text_distance), String.valueOf(distanceOnVideo));
-            // Calculate speed in m/s
+            // Calculate speed in m/s and format to three digits
             double speedMetersPerSecond = 1 / ((CalibrationActivity.PX_PER_CM / Double.parseDouble(distanceEditText.getText().toString())) / distanceOnVideo) / (endOfVideo / 1000000) / 100;
+            DecimalFormat decimalFormat = new DecimalFormat("#.000");
+            speedMetersPerSecond = Double.parseDouble(decimalFormat.format(speedMetersPerSecond));
+            // Display speed in dialog
             AlertDialog.Builder distanceSelectDialogBuilder = new AlertDialog.Builder(CalculateActivity.this);
-            distanceSelectDialogBuilder.setMessage(getString(R.string.text_speed) + ":" + String.valueOf(speedMetersPerSecond) + "m/s");
+            distanceSelectDialogBuilder.setMessage(getString(R.string.text_speed) + ": " + String.valueOf(speedMetersPerSecond) + "m/s");
             AlertDialog distanceSelectDialog = distanceSelectDialogBuilder.create();
             distanceSelectDialog.show();
         }else {
