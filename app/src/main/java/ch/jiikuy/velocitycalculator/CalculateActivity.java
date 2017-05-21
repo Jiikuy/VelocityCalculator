@@ -38,7 +38,7 @@ public class CalculateActivity extends AppCompatActivity {
         final Uri videoUri = intent.getParcelableExtra(MainActivity.EXTRA_VIDEO);
         // Get the ImageView
         imageView = (ImageView) findViewById(R.id.imageView);
-        final AlertDialog.Builder loadingDialogBuilder = new AlertDialog.Builder(CalculateActivity.this);
+        final AlertDialog.Builder loadingDialogBuilder = new AlertDialog.Builder(this);
         // Show loading dialog
         loadingDialogBuilder.setMessage(getString(R.string.text_loading))
                 .setCancelable(false);
@@ -130,14 +130,15 @@ public class CalculateActivity extends AppCompatActivity {
             decimalFormat.applyPattern("0.000");
             Log.i("Formatted speed:", decimalFormat.format(speedMetersPerSecond));
             speedMetersPerSecond = Double.parseDouble(decimalFormat.format(speedMetersPerSecond));
+            double speedKilometersPerHour = Double.parseDouble(decimalFormat.format(speedMetersPerSecond * 3.6));
             // Display speed in dialog
-            AlertDialog.Builder distanceSelectDialogBuilder = new AlertDialog.Builder(CalculateActivity.this);
-            distanceSelectDialogBuilder.setMessage(getString(R.string.text_speed) + ": " + speedMetersPerSecond + "m/s" + "\n" + speedMetersPerSecond*3.6 + "km/h");
+            AlertDialog.Builder distanceSelectDialogBuilder = new AlertDialog.Builder(this);
+            distanceSelectDialogBuilder.setMessage(getString(R.string.text_speed) + ": " + speedMetersPerSecond + "m/s" + "\n" + speedKilometersPerHour);
             AlertDialog distanceSelectDialog = distanceSelectDialogBuilder.create();
             distanceSelectDialog.show();
         }else {
             // Display alert
-            AlertDialog.Builder infoDialogBuilder = new AlertDialog.Builder(CalculateActivity.this);
+            AlertDialog.Builder infoDialogBuilder = new AlertDialog.Builder(this);
             infoDialogBuilder.setMessage(getString(R.string.text_notCompleted));
             AlertDialog distanceSelectDialog = infoDialogBuilder.create();
             distanceSelectDialog.show();

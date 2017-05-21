@@ -1,8 +1,12 @@
 package ch.jiikuy.velocitycalculator;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,7 +26,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        CalibrationActivity.calibrationDistance = Double.longBitsToDouble(sharedPreferences.getLong(getString(R.string.calibration_distance_key), 0));
+        CalibrationActivity.calibrationWidth = Double.longBitsToDouble(sharedPreferences.getLong(getString(R.string.calibration_width_key), 0));
+        Log.e("Distance ", String.valueOf(CalibrationActivity.calibrationDistance));
+        Log.e("Width ", String.valueOf(CalibrationActivity.calibrationWidth));
+        if(CalibrationActivity.calibrationDistance == 0 && CalibrationActivity.calibrationWidth == 0) {
+            CalibrationActivity.calibrationDistance = 30;
+            CalibrationActivity.calibrationWidth = 24.5;
+        }
+
+;    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

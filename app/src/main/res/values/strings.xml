@@ -11,6 +11,9 @@
     <string name="text_notCompleted">Please select two points and enter the distance.</string>
     <string name="text_calibration">Please enter the calibration data.</string>
     <string name="text_calibrationsuccess">Calibration successful!</string>
-    <string name="hint_calibrationwidth">Width (px)</string>
+    <string name="hint_calibrationwidth">Width (cm)</string>
     <string name="text_notCalibrated">Please enter all fields correctly.</string>
+    <string name="calibration_file_key" translatable="false">ch.jiikuy.velocitycalculator.CALIBRATION_FILE_KEY</string>
+    <string name="calibration_width_key" translatable="false">ch.jiikuy.velocitycalculator.CALIBRATION_WIDTH_KEY</string>
+    <string name="calibration_distance_key" translatable="false">ch.jiikuy.velocitycalculator.CALIBRATION_DISTANCE_KEY</string>
 </resources>
