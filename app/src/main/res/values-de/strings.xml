@@ -11,4 +11,7 @@
     <string name="text_speed">Geschwindigkeit</string>
     <string name="text_notCompleted">Bitte berühren Sie zwei Punkte und geben Sie die Distanz ein.</string>
     <string name="text_calibration">Bitte geben Sie die Klaibrierungsdaten ein.</string>
+    <string name="text_calibrationsuccess">Kalibrierung erfolgreich!</string>
+    <string name="hint_calibrationwidth">Breite (px)</string>
+    <string name="text_notCalibrated">Bitte geben Sie in alle Felder korrekte Werte ein.</string>
 </resources>

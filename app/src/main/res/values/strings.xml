@@ -10,4 +10,7 @@
     <string name="text_speed">Speed</string>
     <string name="text_notCompleted">Please select two points and enter the distance.</string>
     <string name="text_calibration">Please enter the calibration data.</string>
+    <string name="text_calibrationsuccess">Calibration successful!</string>
+    <string name="hint_calibrationwidth">Width (px)</string>
+    <string name="text_notCalibrated">Please enter all fields correctly.</string>
 </resources>
