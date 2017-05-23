@@ -29,29 +29,33 @@ public class CalibrationActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        if(!editText2.getText().toString().isEmpty() && !editText3.getText().toString().isEmpty()) {
-            calibrationWidth = Double.parseDouble(editText2.getText().toString());
-            calibrationDistance = Double.parseDouble(editText3.getText().toString());
-            editor.putLong(getString(R.string.calibration_distance_key), Double.doubleToLongBits(calibrationDistance));
-            editor.putLong(getString(R.string.calibration_width_key), Double.doubleToLongBits(calibrationWidth));
-            editor.commit();
-            Log.i("LOL", String.valueOf(Double.doubleToLongBits(calibrationWidth)));
-            Log.i("LOL", String.valueOf(sharedPreferences.getLong(getString(R.string.calibration_width_key), 0)));
-            alertDialogBuilder.setMessage(getString(R.string.text_calibrationsuccess))
-                    .setCancelable(false)
-                    .setPositiveButton(getString(android.R.string.ok), new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                        }
-                    })
-                    .show();
+        try {
+            if (!editText2.getText().toString().isEmpty() && !editText3.getText().toString().isEmpty()) {
+                calibrationWidth = Double.parseDouble(editText2.getText().toString());
+                calibrationDistance = Double.parseDouble(editText3.getText().toString());
+                editor.putLong(getString(R.string.calibration_distance_key), Double.doubleToLongBits(calibrationDistance));
+                editor.putLong(getString(R.string.calibration_width_key), Double.doubleToLongBits(calibrationWidth));
+                editor.commit();
+                alertDialogBuilder.setMessage(getString(R.string.text_calibrationsuccess))
+                        .setCancelable(false)
+                        .setPositiveButton(getString(android.R.string.ok), new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                finish();
+                            }
+                        })
+                        .show();
 
 
-        }else {
+            } else {
+                alertDialogBuilder.setMessage(R.string.text_notCalibrated)
+                        .show();
+
+            }
+        } catch (NullPointerException e) {
+            e.printStackTrace();
             alertDialogBuilder.setMessage(R.string.text_notCalibrated)
-            .show();
-
+                    .show();
         }
     }
 }

@@ -29,14 +29,14 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         CalibrationActivity.calibrationDistance = Double.longBitsToDouble(sharedPreferences.getLong(getString(R.string.calibration_distance_key), 0));
         CalibrationActivity.calibrationWidth = Double.longBitsToDouble(sharedPreferences.getLong(getString(R.string.calibration_width_key), 0));
-        Log.e("Distance ", String.valueOf(CalibrationActivity.calibrationDistance));
-        Log.e("Width ", String.valueOf(CalibrationActivity.calibrationWidth));
+        Log.i("Calibration distance ", String.valueOf(CalibrationActivity.calibrationDistance));
+        Log.i("Calibration width ", String.valueOf(CalibrationActivity.calibrationWidth));
         if(CalibrationActivity.calibrationDistance == 0 && CalibrationActivity.calibrationWidth == 0) {
             CalibrationActivity.calibrationDistance = 30;
             CalibrationActivity.calibrationWidth = 24.5;
         }
 
-;    }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
         if(id == R.id.action_calibrate) {
             Intent intent = new Intent(this, CalibrationActivity.class);
             startActivity(intent);
-            Log.i("iNFO", "sTARTED");
             return true;
         }
         return super.onOptionsItemSelected(item);

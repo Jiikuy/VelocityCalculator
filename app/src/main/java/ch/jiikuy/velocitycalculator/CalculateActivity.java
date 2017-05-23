@@ -47,7 +47,7 @@ public class CalculateActivity extends AppCompatActivity {
         Runnable runnable = new Runnable() {
             public void run() {
                 // Construct MediaMetadataRetriever
-                final MediaMetadataRetriever retriever = new MediaMetadataRetriever();
+                MediaMetadataRetriever retriever = new MediaMetadataRetriever();
                 try {
                     // Get the first and the last frame of the video
                     retriever.setDataSource(CalculateActivity.this, videoUri);
@@ -98,7 +98,6 @@ public class CalculateActivity extends AppCompatActivity {
                         }
                     });
                 }catch(Exception e) {
-                    Log.e("Error:", e.toString());
                     e.printStackTrace();
                 }
             }
@@ -120,28 +119,33 @@ public class CalculateActivity extends AppCompatActivity {
     }
     public void selectCoordinates(View view) {
         EditText distanceEditText = (EditText)findViewById(R.id.editText);
-        if(selections == 2 && !distanceEditText.getText().toString().isEmpty()) {
-            // Get distance on combined image in Pixels
-            int distanceOnVideo = (int) Math.sqrt(Math.pow(values[0] - values[2], 2) + Math.pow(values[1] - values[3], 2));
-            Log.i(getString(R.string.text_distance), String.valueOf(distanceOnVideo));
-            // Calculate speed in m/s and format to three digits
-            double speedMetersPerSecond = 1 / ((CalibrationActivity.PX_PER_CM / Double.parseDouble(distanceEditText.getText().toString())) / distanceOnVideo) / (endOfVideo / 1000000) / 100;
-            DecimalFormat decimalFormat = (DecimalFormat) NumberFormat.getNumberInstance(Locale.ENGLISH);
-            decimalFormat.applyPattern("0.000");
-            Log.i("Formatted speed:", decimalFormat.format(speedMetersPerSecond));
-            speedMetersPerSecond = Double.parseDouble(decimalFormat.format(speedMetersPerSecond));
-            double speedKilometersPerHour = Double.parseDouble(decimalFormat.format(speedMetersPerSecond * 3.6));
-            // Display speed in dialog
-            AlertDialog.Builder distanceSelectDialogBuilder = new AlertDialog.Builder(this);
-            distanceSelectDialogBuilder.setMessage(getString(R.string.text_speed) + ": " + speedMetersPerSecond + "m/s" + "\n" + speedKilometersPerHour);
-            AlertDialog distanceSelectDialog = distanceSelectDialogBuilder.create();
-            distanceSelectDialog.show();
-        }else {
-            // Display alert
+        try {
+            if (selections == 2 && !distanceEditText.getText().toString().isEmpty()) {
+                // Get distance on combined image in PixelsLog.i
+                int distanceOnVideo = (int) Math.sqrt(Math.pow(values[0] - values[2], 2) + Math.pow(values[1] - values[3], 2));
+                Log.i(getString(R.string.text_distance), String.valueOf(distanceOnVideo));
+                // Calculate speed in m/s and format to three digits
+                double speedMetersPerSecond = 1 / ((CalibrationActivity.PX_PER_CM / Double.parseDouble(distanceEditText.getText().toString())) / distanceOnVideo) / (endOfVideo / 1000000) / 100;
+                DecimalFormat decimalFormat = (DecimalFormat) NumberFormat.getNumberInstance(Locale.ENGLISH);
+                decimalFormat.applyPattern("0.000");
+                speedMetersPerSecond = Double.parseDouble(decimalFormat.format(speedMetersPerSecond));
+                double speedKilometersPerHour = Double.parseDouble(decimalFormat.format(speedMetersPerSecond * 3.6));
+                // Display speed in dialog
+                AlertDialog.Builder distanceSelectDialogBuilder = new AlertDialog.Builder(this);
+                distanceSelectDialogBuilder.setMessage(getString(R.string.text_speed) + ": " + speedMetersPerSecond + "m/s" + "\n" + speedKilometersPerHour)
+                        .show();
+
+            } else {
+                // Display alert
+                AlertDialog.Builder infoDialogBuilder = new AlertDialog.Builder(this);
+                infoDialogBuilder.setMessage(getString(R.string.text_notCompleted))
+                        .show();
+            }
+        } catch (NullPointerException e) {
+            e.printStackTrace();
             AlertDialog.Builder infoDialogBuilder = new AlertDialog.Builder(this);
-            infoDialogBuilder.setMessage(getString(R.string.text_notCompleted));
-            AlertDialog distanceSelectDialog = infoDialogBuilder.create();
-            distanceSelectDialog.show();
+            infoDialogBuilder.setMessage(getString(R.string.text_notCompleted))
+                    .show();
         }
     }
 
