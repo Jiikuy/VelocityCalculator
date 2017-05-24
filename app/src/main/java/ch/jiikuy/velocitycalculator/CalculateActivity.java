@@ -132,7 +132,7 @@ public class CalculateActivity extends AppCompatActivity {
                 double speedKilometersPerHour = Double.parseDouble(decimalFormat.format(speedMetersPerSecond * 3.6));
                 // Display speed in dialog
                 AlertDialog.Builder distanceSelectDialogBuilder = new AlertDialog.Builder(this);
-                distanceSelectDialogBuilder.setMessage(getString(R.string.text_speed) + ": " + speedMetersPerSecond + "m/s" + "\n" + speedKilometersPerHour)
+                distanceSelectDialogBuilder.setMessage(getString(R.string.text_speed) + ": " + speedMetersPerSecond + "m/s" + "\n" + speedKilometersPerHour + "km/h")
                         .show();
 
             } else {
