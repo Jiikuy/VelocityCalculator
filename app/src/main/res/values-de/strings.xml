@@ -14,4 +14,5 @@
     <string name="text_calibrationsuccess">Kalibrierung erfolgreich!</string>
     <string name="hint_calibrationwidth">Breite (cm)</string>
     <string name="text_notCalibrated">Bitte geben Sie in alle Felder korrekte Werte ein.</string>
+    <string name="text_calibrationneeded">Sie müssen die App kalibrieren, bevor sie verwendet werden kann.</string>
 </resources>

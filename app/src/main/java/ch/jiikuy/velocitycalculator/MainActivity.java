@@ -1,6 +1,7 @@
 package ch.jiikuy.velocitycalculator;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -32,8 +33,17 @@ public class MainActivity extends AppCompatActivity {
         Log.i("Calibration distance ", String.valueOf(CalibrationActivity.calibrationDistance));
         Log.i("Calibration width ", String.valueOf(CalibrationActivity.calibrationWidth));
         if(CalibrationActivity.calibrationDistance == 0 && CalibrationActivity.calibrationWidth == 0) {
-            CalibrationActivity.calibrationDistance = 30;
-            CalibrationActivity.calibrationWidth = 24.5;
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setCancelable(false)
+                    .setMessage(getString(R.string.text_calibrationneeded))
+                    .setPositiveButton(getString(android.R.string.ok), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(MainActivity.this, CalibrationActivity.class);
+                            startActivity(intent);
+                        }
+                    })
+                    .show();
         }
 
     }
