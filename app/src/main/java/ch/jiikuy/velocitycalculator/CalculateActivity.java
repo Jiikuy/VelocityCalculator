@@ -88,7 +88,7 @@ public class CalculateActivity extends AppCompatActivity {
                                         Canvas canvas = new Canvas(bmOverlay);
                                         Paint paint = new Paint();
                                         paint.setColor(Color.RED);
-                                        canvas.drawCircle(event.getX() * (float)width, event.getY() * (float)width, 25, paint);
+                                        canvas.drawCircle(event.getX() * (float)width, event.getY() * (float)width, 15, paint);
                                         imageView.setImageBitmap(bmOverlay);
                                         Log.i("Coordinates " + selections, event.getX() * width + " " + event.getY() * width);
                                     }
