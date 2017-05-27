@@ -10,7 +10,6 @@ import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
@@ -53,7 +52,6 @@ public class CalculateActivity extends AppCompatActivity {
                     retriever.setDataSource(CalculateActivity.this, videoUri);
                     bms[0] = retriever.getFrameAtTime(0, MediaMetadataRetriever.OPTION_CLOSEST);
                     endOfVideo = Long.parseLong(retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION)) * 1000;
-                    Log.i("Duration:", String.valueOf(endOfVideo));
                     bms[1] = retriever.getFrameAtTime(endOfVideo);
                     while(bms[1] == null ) {
                         bms[1] = retriever.getFrameAtTime(endOfVideo-=10000);
@@ -90,7 +88,6 @@ public class CalculateActivity extends AppCompatActivity {
                                         paint.setColor(Color.RED);
                                         canvas.drawCircle(event.getX() * (float)width, event.getY() * (float)width, 15, paint);
                                         imageView.setImageBitmap(bmOverlay);
-                                        Log.i("Coordinates " + selections, event.getX() * width + " " + event.getY() * width);
                                     }
                                     return true;
                                 }
@@ -121,9 +118,8 @@ public class CalculateActivity extends AppCompatActivity {
         EditText distanceEditText = (EditText)findViewById(R.id.editText);
         try {
             if (selections == 2 && !distanceEditText.getText().toString().isEmpty()) {
-                // Get distance on combined image in PixelsLog.i
+                // Get distance on combined image in Pixels
                 int distanceOnVideo = (int) Math.sqrt(Math.pow(values[0] - values[2], 2) + Math.pow(values[1] - values[3], 2));
-                Log.i(getString(R.string.text_distance), String.valueOf(distanceOnVideo));
                 // Calculate speed in m/s and format to three digits
                 double speedMetersPerSecond = 1 / ((CalibrationActivity.PX_PER_CM / Double.parseDouble(distanceEditText.getText().toString())) / distanceOnVideo) / (endOfVideo / 1000000) / 100;
                 DecimalFormat decimalFormat = (DecimalFormat) NumberFormat.getNumberInstance(Locale.ENGLISH);

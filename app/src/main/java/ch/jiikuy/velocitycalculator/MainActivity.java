@@ -1,6 +1,5 @@
 package ch.jiikuy.velocitycalculator;
 
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,7 +9,6 @@ import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -30,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         CalibrationActivity.calibrationDistance = Double.longBitsToDouble(sharedPreferences.getLong(getString(R.string.calibration_distance_key), 0));
         CalibrationActivity.calibrationWidth = Double.longBitsToDouble(sharedPreferences.getLong(getString(R.string.calibration_width_key), 0));
-        Log.i("Calibration distance ", String.valueOf(CalibrationActivity.calibrationDistance));
-        Log.i("Calibration width ", String.valueOf(CalibrationActivity.calibrationWidth));
         if(CalibrationActivity.calibrationDistance == 0 && CalibrationActivity.calibrationWidth == 0) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setCancelable(false)
@@ -89,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
             Uri videoUri = null;
             if(resultData != null) {
                 videoUri = resultData.getData();
-                Log.i("Uri ", videoUri.toString());
             }
             Intent calc = new Intent(this, CalculateActivity.class);
             calc.putExtra(EXTRA_VIDEO, videoUri);
