@@ -1,0 +1,17 @@
+resources>
+    <string name="app_name">Calculateur de Vitesse</string>
+    <string name="select_video">Ouvrir ou enregistrer une vidéo.</string>
+    <string name="text_capture">Enregistrer</string>
+    <string name="text_open">Ouvrir</string>
+    <string name="touch_hint">Veuillez s\'il vous plaît toucher deux points entre lesquels l\'objet a bougé.</string>
+    <string name="text_distance">Distance</string>
+    <string name="text_loading">Chargement...</string>
+    <string name="distance_hint">Distance entre la caméra et l\'objet (cm)</string>
+    <string name="text_speed">Vitesse</string>
+    <string name="text_notCompleted">Veuillez s\'il vous plaît sélectionner deux points et entrer la distance entre.</string>
+    <string name="text_calibration">Veuillez s\'il vous plaît entrer les données de calibration.</string>
+    <string name="text_calibrationsuccess">Calibration effectuée avec succès!</string>
+    <string name="hint_calibrationwidth">Largeur (cm)</string>
+    <string name="text_notCalibrated">Entrez correctement tous les champs SVP.</string>
+    <string name="text_calibrationneeded">Vous devez calibrer l\'application avant de pouvoir l\'utiliser.</string>
+</resources>
