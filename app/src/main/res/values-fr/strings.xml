@@ -1,4 +1,4 @@
-resources>
+<resources>
     <string name="app_name">Calculateur de Vitesse</string>
     <string name="select_video">Ouvrir ou enregistrer une vidéo.</string>
     <string name="text_capture">Enregistrer</string>
