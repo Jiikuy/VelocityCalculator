@@ -4,7 +4,6 @@
     <string name="distance_hint">Distanz der Kamera zum Objekt (cm)</string>
     <string name="select_video">Öffnen oder erfassen Sie ein Video.</string>
     <string name="text_capture">Aufnehmen</string>
-    <string name="text_distance">Distanz</string>
     <string name="text_loading">Laden...</string>
     <string name="text_open">Öffnen</string>
     <string name="touch_hint">Bitte berühren sie die zwei Punkte, zwischen denen sich das Objekt bewegt hat.</string>

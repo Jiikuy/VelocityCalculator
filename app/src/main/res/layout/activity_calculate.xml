@@ -43,6 +43,7 @@
         android:layout_width="90dp"
         android:layout_height="49dp"
         android:layout_marginRight="13dp"
+        android:layout_marginEnd="13dp"
         android:onClick="selectCoordinates"
         android:text="@android:string/ok"
         app:layout_constraintBaseline_toBaselineOf="@+id/editText"

@@ -15,8 +15,8 @@ import android.view.MenuItem;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
-    static final int REQUEST_VIDEO_CAPTURE = 1;
-    static final int REQUEST_ViDEO_OPEN = 2;
+    private static final int REQUEST_VIDEO_CAPTURE = 1;
+    private static final int REQUEST_ViDEO_OPEN = 2;
     static final String EXTRA_VIDEO = "ch.jiikuy.velocitycalculator.VIDEO";
 
 
@@ -26,9 +26,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        // Get calibration values
         CalibrationActivity.calibrationDistance = Double.longBitsToDouble(sharedPreferences.getLong(getString(R.string.calibration_distance_key), 0));
         CalibrationActivity.calibrationWidth = Double.longBitsToDouble(sharedPreferences.getLong(getString(R.string.calibration_width_key), 0));
         if(CalibrationActivity.calibrationDistance == 0 && CalibrationActivity.calibrationWidth == 0) {
+            // Show AlertDialog to calibrate app
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setCancelable(false)
                     .setMessage(getString(R.string.text_calibrationneeded))
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        // Show calibration ActionBar item
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.main_menu, menu);
         return true;
@@ -87,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                 videoUri = resultData.getData();
             }
             Intent calc = new Intent(this, CalculateActivity.class);
-            calc.putExtra(EXTRA_VIDEO, videoUri);
+            calc.putExtra(getResources().getString(R.string.main_extra_video), videoUri);
             startActivity(calc);
         }
     }
