@@ -16,6 +16,7 @@
         android:adjustViewBounds="true"
         android:cropToPadding="true"
         android:scaleType="centerInside"
+        android:contentDescription="Overlayed pictures"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"

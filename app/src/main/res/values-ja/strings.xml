@@ -13,4 +13,10 @@
     <string name="hint_calibrationwidth">幅 (cm)</string>
     <string name="text_notCalibrated">すべてのフィールドを正しく入力してください。</string>
     <string name="text_calibrationneeded">使用する前にアプリをキャリブレーション（校正）する必要があります。</string>
+    <string name="about_author">作者</string>
+    <string name="about_license">ライセンス</string>
+    <string name="about_country">スイス</string>
+    <string name="about_contribute">助けます</string>
+    <string name="about_sourcecode">ソースコード</string>
+    <string name="about_version">バージョン</string>
 </resources>

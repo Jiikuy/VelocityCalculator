@@ -13,4 +13,25 @@
     <string name="hint_calibrationwidth">Width (cm)</string>
     <string name="text_notCalibrated">Please enter all fields correctly.</string>
     <string name="text_calibrationneeded">You need to calibrate the app before you can use it.</string>
+    <string name="about_license">License</string>
+    <string name="about_version">Version</string>
+    <string name="about_gpl" translatable="false">GNU General Public License</string>
+    <string name="about_authorname" translatable="false">Georg Rieger</string>
+    <string name="about_country">Switzerland</string>
+    <string name="about_sendemail">Send me an e-mail</string>
+    <string name="about_emailaddress" translatable="false">georg.rieger@eblcom.ch</string>
+    <string name="about_githubusername" translatable="false">\@Jiikuy</string>
+    <string name="about_github" translatable="false">GitHub</string>
+    <string name="about_sourcecode">Source Code</string>
+    <string name="about_author">Author</string>
+    <string name="about_contribute">Contribute</string>
+    <string name="about_reportissue">Report an issue</string>
+    <string name="about_reportissuehere">Having an issue? Report it here</string>
+    <string name="about_translate">Translate this app</string>
+    <string name="about_translatehere">On POEditor</string>
+    <string name="about_opensourcelibs">Open Source Libraries</string>
+    <string name="about">About</string>
+    <string name="menu_calibration">Calibrate</string>
+    <string name="about_documentation">Documentation</string>
+    <string name="about_translators">Translators</string>
 </resources>
