@@ -1,6 +1,7 @@
 package ch.jiikuy.velocitycalculator;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
@@ -81,9 +82,8 @@ public class AboutActivity extends MaterialAboutActivity {
                         .icon(CommunityMaterial.Icon.cmd_book_open)
                         .color(Color.GRAY)
                         .sizeDp(18), getString(R.string.about_documentation), false, Uri.parse("https://github.com/Jiikuy/VelocityCalculator/wiki/")))
-                // TODO: add translators screen
-                /*.addItem(new MaterialAboutActionItem.Builder()
-                        .text(getString(R.string.about_translators))
+                .addItem(new MaterialAboutActionItem.Builder()
+                        .text(getString(R.string.about_translations))
                         .icon(new IconicsDrawable(context)
                                 .icon(CommunityMaterial.Icon.cmd_translate)
                                 .color(Color.GRAY)
@@ -91,11 +91,11 @@ public class AboutActivity extends MaterialAboutActivity {
                         .setOnClickAction(new MaterialAboutItemOnClickAction() {
                             @Override
                             public void onClick() {
-
-
+                                Intent intent = new Intent(AboutActivity.this, ShowTranslationsActivity.class);
+                                startActivity(intent);
                             }
                             })
-                        .build())*/
+                        .build())
                 .addItem(new MaterialAboutActionItem.Builder()
                     .text(getString(R.string.about_opensourcelibs))
                     .icon(new IconicsDrawable(context)

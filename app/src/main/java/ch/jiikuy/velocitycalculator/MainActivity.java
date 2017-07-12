@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.os.Build;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
@@ -17,7 +18,6 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_VIDEO_CAPTURE = 1;
     private static final int REQUEST_ViDEO_OPEN = 2;
-    static final String EXTRA_VIDEO = "ch.jiikuy.velocitycalculator.VIDEO";
 
 
 
@@ -78,10 +78,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void openVideo(View view) {
         // Open video
-        Intent openVideoIntent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
-        openVideoIntent.addCategory(Intent.CATEGORY_OPENABLE);
+        Intent openVideoIntent = new Intent();
         openVideoIntent.setType("video/*");
-        startActivityForResult(openVideoIntent, REQUEST_ViDEO_OPEN);
+        if(Build.VERSION.SDK_INT >= 19) {
+            openVideoIntent.addCategory(Intent.CATEGORY_OPENABLE);
+            startActivityForResult(openVideoIntent, REQUEST_ViDEO_OPEN);
+        }else {
+            openVideoIntent.setAction(Intent.ACTION_PICK)
+            .setData(MediaStore.Video.Media.EXTERNAL_CONTENT_URI);
+            startActivityForResult(openVideoIntent, REQUEST_ViDEO_OPEN);
+        }
     }
 
     @Override

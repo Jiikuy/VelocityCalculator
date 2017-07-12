@@ -29,5 +29,5 @@
     <string name="about">Über</string>
     <string name="menu_calibration">Kalibrieren</string>
     <string name="about_documentation">Dokumentation</string>
-    <string name="about_translators">Übersetzer</string>
+    <string name="about_translations">Übersetzungen</string>
 </resources>

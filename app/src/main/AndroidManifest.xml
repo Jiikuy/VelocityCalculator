@@ -41,7 +41,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".ShowTranslatorsActivity" android:parentActivityName=".MainActivity">
+        <activity android:name=".ShowTranslationsActivity" android:parentActivityName=".AboutActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".AboutActivity" />

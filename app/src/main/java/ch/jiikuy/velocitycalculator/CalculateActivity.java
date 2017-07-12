@@ -34,7 +34,7 @@ public class CalculateActivity extends AppCompatActivity {
 
         // Get the URI of the video
         Intent intent = getIntent();
-        final Uri videoUri = intent.getParcelableExtra(MainActivity.EXTRA_VIDEO);
+        final Uri videoUri = intent.getParcelableExtra(getString(R.string.main_extra_video));
         // Get the ImageView
         imageView = (ImageView) findViewById(R.id.imageView);
         final AlertDialog.Builder loadingDialogBuilder = new AlertDialog.Builder(this);
