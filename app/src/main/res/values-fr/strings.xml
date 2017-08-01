@@ -14,4 +14,13 @@ resources>
     <string name="hint_calibrationwidth">Largeur (cm)</string>
     <string name="text_notCalibrated">Entrez correctement tous les champs SVP.</string>
     <string name="text_calibrationneeded">Vous devez calibrer l\'application avant de pouvoir l\'utiliser.</string>
+    <string name="about_country">Suisse</string>
+    <string name="about_license">Licence</string>
+    <string name="about_contribute">Contribuer</string>
+    <string name="about_author">Auteur</string>
+    <string name="about_reportissuehere">Vous avez trouvé un bug? Signalez-le ici</string>
+    <string name="about_reportissue">Signaler une erreur</string>
+    <string name="about_sendemail">Envoyez-moi un E-mail</string>
+    <string name="about_sourcecode">Code source</string>
+    <string name="about_version">Version</string>
 </resources>
