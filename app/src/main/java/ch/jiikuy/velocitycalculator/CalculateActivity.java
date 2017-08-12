@@ -21,12 +21,12 @@ import java.util.Locale;
 
 
 public class CalculateActivity extends AppCompatActivity {
-    int selections = 0;
-    Double[] values = new Double[4];
-    Bitmap[] bms = new Bitmap[2];
-    Bitmap bmOverlay;
-    ImageView imageView;
-    long endOfVideo = 0;
+    private int selections = 0;
+    private final Double[] values = new Double[4];
+    private final Bitmap[] bms = new Bitmap[2];
+    private Bitmap bmOverlay;
+    private ImageView imageView;
+    private long endOfVideo = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +34,7 @@ public class CalculateActivity extends AppCompatActivity {
 
         // Get the URI of the video
         Intent intent = getIntent();
-        final Uri videoUri = intent.getParcelableExtra(MainActivity.EXTRA_VIDEO);
+        final Uri videoUri = intent.getParcelableExtra(getString(R.string.main_extra_video));
         // Get the ImageView
         imageView = (ImageView) findViewById(R.id.imageView);
         final AlertDialog.Builder loadingDialogBuilder = new AlertDialog.Builder(this);
@@ -58,6 +58,7 @@ public class CalculateActivity extends AppCompatActivity {
                     }
                     // Calculate Pixel/Centimeter from the calibration width and calibration distance
                     CalibrationActivity.PX_PER_CM = Double.parseDouble(retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH)) / CalibrationActivity.calibrationWidth * CalibrationActivity.calibrationDistance;
+                    retriever.release();
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -84,6 +85,7 @@ public class CalculateActivity extends AppCompatActivity {
                                             values[3] = event.getY() * width;
                                         }
                                         Canvas canvas = new Canvas(bmOverlay);
+                                        // Draw red point
                                         Paint paint = new Paint();
                                         paint.setColor(Color.RED);
                                         canvas.drawCircle(event.getX() * (float)width, event.getY() * (float)width, 15, paint);

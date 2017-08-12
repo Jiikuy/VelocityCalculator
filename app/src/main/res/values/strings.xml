@@ -4,7 +4,6 @@
     <string name="text_capture">Capture</string>
     <string name="text_open">Open</string>
     <string name="touch_hint">Please touch two points where the object has moved between.</string>
-    <string name="text_distance">Distance</string>
     <string name="text_loading">Loading...</string>
     <string name="distance_hint">Distance of camera to object (cm)</string>
     <string name="text_speed">Speed</string>
@@ -13,8 +12,27 @@
     <string name="text_calibrationsuccess">Calibration successful!</string>
     <string name="hint_calibrationwidth">Width (cm)</string>
     <string name="text_notCalibrated">Please enter all fields correctly.</string>
-    <string name="calibration_file_key" translatable="false">ch.jiikuy.velocitycalculator.CALIBRATION_FILE_KEY</string>
-    <string name="calibration_width_key" translatable="false">ch.jiikuy.velocitycalculator.CALIBRATION_WIDTH_KEY</string>
-    <string name="calibration_distance_key" translatable="false">ch.jiikuy.velocitycalculator.CALIBRATION_DISTANCE_KEY</string>
     <string name="text_calibrationneeded">You need to calibrate the app before you can use it.</string>
+    <string name="about_license">License</string>
+    <string name="about_version">Version</string>
+    <string name="about_gpl" translatable="false">GNU General Public License</string>
+    <string name="about_authorname" translatable="false">Georg Rieger</string>
+    <string name="about_country">Switzerland</string>
+    <string name="about_sendemail">Send me an e-mail</string>
+    <string name="about_emailaddress" translatable="false">georg.rieger@eblcom.ch</string>
+    <string name="about_githubusername" translatable="false">\@Jiikuy</string>
+    <string name="about_github" translatable="false">GitHub</string>
+    <string name="about_sourcecode">Source Code</string>
+    <string name="about_author">Author</string>
+    <string name="about_contribute">Contribute</string>
+    <string name="about_reportissue">Report an issue</string>
+    <string name="about_reportissuehere">Having an issue? Report it here</string>
+    <string name="about_translate">Translate this app</string>
+    <string name="about_translatehere">On POEditor</string>
+    <string name="about_opensourcelibs">Open Source Libraries</string>
+    <string name="about">About</string>
+    <string name="menu_calibration">Calibrate</string>
+    <string name="about_documentation">Documentation</string>
+    <string name="about_translations">Translations</string>
+    <string name="html_translations"><![CDATA[<b>English</b><br> <a href="https://github.com/jiikuy/">Georg Rieger (Jiikuy)</a><br> <b>Deutsch</b><br> <a href="https://github.com/jiikuy/">Georg Rieger (Jiikuy)</a><br><b>Français</b><br> <a href="https://github.com/Poussinou/">Poussinou</a><br> <b>日本の</b><br> <a href="https://github.com/naofum">naofum</a><br>]]></string>
 </resources>

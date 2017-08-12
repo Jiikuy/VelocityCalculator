@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Velocity Calculator</string>
+    <string name="select_video">ビデオを開くか、キャプチャしてください。</string>
+    <string name="text_capture">キャプチャ</string>
+    <string name="text_open">開く</string>
+    <string name="touch_hint">オブジェクトが動いた 2 点の場所をタッチしてください。</string>
+    <string name="text_loading">ロード中...</string>
+    <string name="distance_hint">カメラからオブジェクトの距離 (cm)</string>
+    <string name="text_speed">速度</string>
+    <string name="text_notCompleted">2 点を選択して距離を入力してください。</string>
+    <string name="text_calibration">キャリブレーション（校正）データを入力してください。</string>
+    <string name="text_calibrationsuccess">キャリブレーションに成功しました!</string>
+    <string name="hint_calibrationwidth">幅 (cm)</string>
+    <string name="text_notCalibrated">すべてのフィールドを正しく入力してください。</string>
+    <string name="text_calibrationneeded">使用する前にアプリをキャリブレーション（校正）する必要があります。</string>
+    <string name="about_author">作者</string>
+    <string name="about_license">ライセンス</string>
+    <string name="about_country">スイス</string>
+    <string name="about_contribute">助けます</string>
+    <string name="about_sourcecode">ソースコード</string>
+    <string name="about_version">バージョン</string>
+</resources>

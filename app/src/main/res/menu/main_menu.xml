@@ -5,6 +5,11 @@
     <item
         android:id="@+id/action_calibrate"
         android:icon="@android:drawable/ic_menu_compass"
-        android:title="Calibrate"
-        app:showAsAction="always" />
+        android:title="@string/menu_calibration"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_about"
+        android:title="@string/about"
+        app:showAsAction="never" />
 </menu>

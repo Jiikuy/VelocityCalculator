@@ -4,7 +4,6 @@
     <string name="distance_hint">Distanz der Kamera zum Objekt (cm)</string>
     <string name="select_video">Öffnen oder erfassen Sie ein Video.</string>
     <string name="text_capture">Aufnehmen</string>
-    <string name="text_distance">Distanz</string>
     <string name="text_loading">Laden...</string>
     <string name="text_open">Öffnen</string>
     <string name="touch_hint">Bitte berühren sie die zwei Punkte, zwischen denen sich das Objekt bewegt hat.</string>
@@ -15,4 +14,20 @@
     <string name="hint_calibrationwidth">Breite (cm)</string>
     <string name="text_notCalibrated">Bitte geben Sie in alle Felder korrekte Werte ein.</string>
     <string name="text_calibrationneeded">Sie müssen die App kalibrieren, bevor sie verwendet werden kann.</string>
+    <string name="about_license">Lizenz</string>
+    <string name="about_version">Version</string>
+    <string name="about_country">Schweiz</string>
+    <string name="about_sendemail">Senden Sie mir eine E-Mail</string>
+    <string name="about_sourcecode">Source-Code</string>
+    <string name="about_author">Autor</string>
+    <string name="about_contribute">Beitragen</string>
+    <string name="about_reportissue">Einen Fehler melden</string>
+    <string name="about_reportissuehere">Haben Sie einen Fehler gefunden? Melden Sie ihn hier</string>
+    <string name="about_translate">Diese App übersetzen</string>
+    <string name="about_translatehere">Auf POEditor</string>
+    <string name="about_opensourcelibs">Open Source Bibliotheken</string>
+    <string name="about">Über</string>
+    <string name="menu_calibration">Kalibrieren</string>
+    <string name="about_documentation">Dokumentation</string>
+    <string name="about_translations">Übersetzungen</string>
 </resources>
