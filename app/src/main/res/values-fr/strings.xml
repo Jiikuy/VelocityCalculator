@@ -15,11 +15,11 @@
     <string name="text_calibrationneeded">Vous devez calibrer l\'application avant de pouvoir l\'utiliser.</string>
     <string name="about_country">Suisse</string>
     <string name="about_license">Licence</string>
-    <string name="about_contribute">Aider</string>
+    <string name="about_contribute">Contribuer</string>
     <string name="about_author">Auteur</string>
-    <string name="about_reportissuehere">Avez-vous trouvé une erreur? Signalez-le ici</string>
+    <string name="about_reportissuehere">Vous avez trouvé un bug? Signalez-le ici</string>
     <string name="about_reportissue">Signaler une erreur</string>
-    <string name="about_sendemail">Envoyez-moi un e-mail</string>
-    <string name="about_sourcecode">Source code</string>
+    <string name="about_sendemail">Envoyez-moi un E-mail</string>
+    <string name="about_sourcecode">Code source</string>
     <string name="about_version">Version</string>
 </resources>
