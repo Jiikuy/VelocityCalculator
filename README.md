@@ -7,4 +7,4 @@ Android app for calculating the speed of objects in videos. See the [wiki](https
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
-This software is licensed under the terms of the (GNU General Public License)[http://www.gnu.org/licenses/gpl-3.0.html].
+This software is licensed under the terms of the [GNU General Public License](http://www.gnu.org/licenses/gpl-3.0.html).
