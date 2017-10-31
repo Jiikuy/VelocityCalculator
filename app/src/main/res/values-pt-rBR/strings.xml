@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Velocity Calculator</string>
+    <string name="select_video">Abrir ou gravar um vídeo.</string>
+    <string name="text_capture">Gravar</string>
+    <string name="text_open">Abrir</string>
+    <string name="touch_hint">Por favor toque em dois pontos entre os quais o objeto moveu-se.</string>
+    <string name="text_loading">Carregando...</string>
+    <string name="distance_hint">Distância da câmera ao objeto (cm)</string>
+    <string name="text_speed">Velocidade</string>
+    <string name="text_notCompleted">Por favor selecione dois pontos e insira a distância.</string>
+    <string name="text_calibration">Por favor insira os dados de calibração.</string>
+    <string name="text_calibrationsuccess">Calibrado com sucesso!</string>
+    <string name="hint_calibrationwidth">Largura (cm)</string>
+    <string name="text_notCalibrated">Por favor insira todos os campos corretamente.</string>
+    <string name="text_calibrationneeded">Você precisa calibrar o app antes de poder usá-lo.</string>
+    <string name="about_license">Licença</string>
+    <string name="about_version">Versão</string>
+    <string name="about_gpl" translatable="false">GNU General Public License</string>
+    <string name="about_authorname" translatable="false">Georg Rieger</string>
+    <string name="about_country">Suiça</string>
+    <string name="about_sendemail">Enviar um e-mail</string>
+    <string name="about_emailaddress" translatable="false">georg.rieger@eblcom.ch</string>
+    <string name="about_githubusername" translatable="false">\@Jiikuy</string>
+    <string name="about_github" translatable="false">GitHub</string>
+    <string name="about_sourcecode">Código Fonte</string>
+    <string name="about_author">Autor</string>
+    <string name="about_contribute">Contribuir</string>
+    <string name="about_reportissue">Reporte um problema</string>
+    <string name="about_reportissuehere">Tendo um problema? Reporte-o aqui</string>
+    <string name="about_translate">Traduza este app</string>
+    <string name="about_translatehere">No POEditor</string>
+    <string name="about_opensourcelibs">Bibliotecas de Código Aberto</string>
+    <string name="about">Sobre</string>
+    <string name="menu_calibration">Calibrar</string>
+    <string name="about_documentation">Documentação</string>
+    <string name="about_translations">Traduções</string>
+    <string name="html_translations" translatable="false"><![CDATA[<b>English</b><br> <a href="https://github.com/jiikuy/">Georg Rieger (Jiikuy)</a><br> <b>Deutsch</b><br> <a href="https://github.com/jiikuy/">Georg Rieger (Jiikuy)</a><br><b>Français</b><br> <a href="https://github.com/Poussinou/">Poussinou</a><br> <b>日本の</b><br> <a href="https://github.com/naofum">naofum</a><br>]]></string>
+</resources>
