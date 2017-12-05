@@ -15,13 +15,8 @@
     <string name="text_calibrationneeded">Você precisa calibrar o app antes de utilizá-lo.</string>
     <string name="about_license">Licença</string>
     <string name="about_version">Versão</string>
-    <string name="about_gpl" translatable="false">GNU General Public License</string>
-    <string name="about_authorname" translatable="false">Georg Rieger</string>
     <string name="about_country">Suiça</string>
     <string name="about_sendemail">Enviar um e-mail</string>
-    <string name="about_emailaddress" translatable="false">georg.rieger@eblcom.ch</string>
-    <string name="about_githubusername" translatable="false">\@Jiikuy</string>
-    <string name="about_github" translatable="false">GitHub</string>
     <string name="about_sourcecode">Código Fonte</string>
     <string name="about_author">Autor</string>
     <string name="about_contribute">Contribuir</string>
@@ -34,5 +29,3 @@
     <string name="menu_calibration">Calibrar</string>
     <string name="about_documentation">Documentação</string>
     <string name="about_translations">Traduções</string>
-    <string name="html_translations" translatable="false"><![CDATA[<b>English</b><br> <a href="https://github.com/jiikuy/">Georg Rieger (Jiikuy)</a><br> <b>Deutsch</b><br> <a href="https://github.com/jiikuy/">Georg Rieger (Jiikuy)</a><br><b>Français</b><br> <a href="https://github.com/Poussinou/">Poussinou</a><br> <b>日本の</b><br> <a href="https://github.com/naofum">naofum</a><br>]]></string>
-</resources>
