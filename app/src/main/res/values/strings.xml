@@ -34,5 +34,5 @@
     <string name="menu_calibration">Calibrate</string>
     <string name="about_documentation">Documentation</string>
     <string name="about_translations">Translations</string>
-    <string name="html_translations" translatable="false"><![CDATA[<b>English</b><br> <a href="https://github.com/jiikuy/">Georg Rieger (Jiikuy)</a><br> <b>Deutsch</b><br> <a href="https://github.com/jiikuy/">Georg Rieger (Jiikuy)</a><br><b>Français</b><br> <a href="https://github.com/Poussinou/">Poussinou</a><br> <b>日本の</b><br> <a href="https://github.com/naofum">naofum</a><br>]]></string>
+    <string name="html_translations" translatable="false"><![CDATA[<b>English</b><br> <a href="https://github.com/jiikuy/">Georg Rieger (Jiikuy)</a><br> <b>Deutsch</b><br> <a href="https://github.com/jiikuy/">Georg Rieger (Jiikuy)</a><br><b>Français</b><br> <a href="https://github.com/Poussinou/">Poussinou</a><br> <b>日本の</b><br> <a href="https://github.com/naofum">naofum</a><br> <b>Português brasileiro</b><br> <a href="https://github.com/afmachado/">afmachado</a>]]></string>
 </resources>
